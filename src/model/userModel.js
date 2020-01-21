@@ -1,9 +1,9 @@
 const db = require('./../connection/db');
 
 const User = db.dbpsql.define('user', {
-    name: {type: db.Sequelize.STRING},
-    email: { type: db.Sequelize.STRING},
-    type: { type: db.Sequelize.INTEGER }
+    name: {type: db.Sequelize.STRING, allowNull: false},
+    email: { type: db.Sequelize.STRING, allowNull: false},
+    type: { type: db.Sequelize.INTEGER, allowNull: false }
 });
 
 //CRIAR TABELA

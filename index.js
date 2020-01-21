@@ -22,3 +22,17 @@ connect.dbpsql.authenticate()
 connect.dbmongo
 .then(()=>{console.log('MongoDB :: Connected')})
 .catch(err => console.log('MongoDB :: Disconnected '+ err));
+
+connect.Redis.on('error', function (err){
+    console.log('Error ' + err)
+})
+// connect.Redis.on()
+// .then(()=>{ console.log("Redis :: Connected")})
+// .catch(err => console.log("Redis :: Disconnected" + err))
+
+// connect.Redis.on((err, res) => {
+//     if(err)
+//         console.log("Redis :: Disconnected");
+//     if(res)
+//         console.log("Redis :: Connected")
+// })
