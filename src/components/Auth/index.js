@@ -42,7 +42,7 @@ async function deleteUser(req, res, next){
 async function createOs(req, res, next){
     try {
         const newOs = await authSrv.createOs(req.body);
-        res.status(200).json("Ordem de Serviço cadastrada com sucesso " + newOs);
+        res.status(200).json("Ordem de Serviço cadastrada com sucesso ");
 
     
     } catch (error) {
@@ -50,11 +50,31 @@ async function createOs(req, res, next){
     }
 }
 
+async function getByName(req, res, next){
+    try {
+        const getByName = await authSrv.getByName(req.body);
+        res.status(200).json(getByName);
+    } catch (error) {
+        res.stauts(400).json(error.message);
+    }
+}
+
+async function getOs(req, res, next){
+    try {
+        const getOS = await authSrv.getOs(req.params.id);
+        res.status(200).json(getOS);
+    } catch (error) {
+        res.status(400).json(error.message);
+        
+    }
+}
 
 module.exports = {
     getAll,
     signup, 
     getByEmail, 
     deleteUser,
-    createOs
+    createOs,
+    getByName,
+    getOs
 }
