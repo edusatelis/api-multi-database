@@ -8,7 +8,8 @@ const OsSchema = new mongoose.Schema({
     requester: { type: String, require: true },
     text: {type: String, require: true},
     date: { type: String},
-    finalDate: { type: String}
+    finalDate: { type: String},
+    realized: {type: Boolean, default: false}
 
 })
 

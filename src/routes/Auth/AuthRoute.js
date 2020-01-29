@@ -3,6 +3,7 @@ const authSrv = require('./../../components/Auth/index')
 const router = Router();
 
 router.get('/OS/:id', authSrv.getOs);
+router.get('/OS/getOsById/:id', authSrv.getOsById);
 router.post('/OS/newOs', authSrv.createOs);
 
 router.get('/getAll', authSrv.getAll );

@@ -69,6 +69,15 @@ async function getOs(req, res, next){
     }
 }
 
+async function getOsById(req, res, next){
+    try {
+        const getOsById = await authSrv.getOsById(req.params.id);
+        res.status(200).json(getOsById);
+    } catch (error) {
+        res.status(400).json(error.message);
+    }
+}
+
 module.exports = {
     getAll,
     signup, 
@@ -76,5 +85,6 @@ module.exports = {
     deleteUser,
     createOs,
     getByName,
-    getOs
+    getOs,
+    getOsById
 }
