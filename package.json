@@ -18,7 +18,7 @@
     "node-restful": "^0.2.6",
     "pg": "^7.17.1",
     "pg-hstore": "^2.3.3",
-    "redis": "^2.8.0",
+    "redis": "^3.1.1",
     "sequelize": "^5.21.3"
   },
   "devDependencies": {
